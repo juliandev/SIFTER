@@ -1,0 +1,19 @@
+SIFTER: Statistical Inference of Function Through Evolutionary Relationships
+
+Copyright (c) 2010 Barbara E Engelhardt. All Right Reserved. http://sifter.berkeley.edu
+
+
+Under active development by: Barbara Engelhardt <bee@compbio.berkeley.edu>
+
+Previous developers:
+Philip Johnson <plfjohnson@berkeley.edu>
+Steven R. Chan <steven@berkeley.edu>
+
+Please cite new paper:
+- Engelhardt BE, Srouji JE, Jordan MI, Brenner SE (2010)
+
+Original paper available at PLoS Computational Biology:
+- Engelhardt BE, Jordan MI, Muratore KE, Brenner SE (2005) Protein Molecular Function Prediction by Bayesian Phylogenomics. PLoS Comput Biol 1(5): e45
+
+ICML paper describing newer version of the model available on BE's website:
+- Engelhardt, BE, Jordan, MI, Brenner SE (2006) A statistical graphical model for predicting protein molecular function. Proceedings of the International Conference on Machine Learning (accepted).
