@@ -36,7 +36,7 @@ public class FitnessFunction {
 			
 		double fitness = 0;
 		double alphaM = alphaArray(alphaArray);
-		double phiM = phiArray(phiArray);
+		double phiM = sigmaArray(phiArray);
 		double transitionM = transitionMatrix(transitionMatrix);
 			
 		fitness = transitionM + alphaM + phiM;
@@ -87,9 +87,9 @@ public class FitnessFunction {
 	 * @param phiArray
 	 * @return the difference between the events
 	 */
-	private double phiArray(double[] phiArray) {
+	private double sigmaArray(double[] sigmaArray) {
 		
-		return phiArray[1] - phiArray[0];
+		return sigmaArray[1] - sigmaArray[0];
 		
 	} 
 	
