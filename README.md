@@ -13,7 +13,7 @@ Original paper:
 Genome-scale phylogenetic function annotation of large and diverse protein families. Genome Research 21:1969-1980. doi:10.1101/gr.104687.109 
 
 Please cite the last paper:
-- Sahraeian SME, Luo KR, Brenner SE (2015)
+- Danillo C. Almeida-E-Silva and Ricardo Vêncio
 SIFTER-T: A scalable and optimized framework for the SIFTER phylogenomic method of probabilistic protein domain annotation. BioTechniques 58:140-142. 
 doi: 10.2144/000114266
 
@@ -148,7 +148,7 @@ usage: `java -jar sifter.jar [OPTIONS] FAMILYNAME`
 **Note about command line options:** use option name with `--`, except in the case of verbose (use `-v`).
 
 ## Setup
-To configure the files, databases, ontologies, etc. you can use the scripts developed by Sahraeian et. al, see the **README** in the scripts/ directory.
+To configure the files, databases, ontologies, etc. you can use the scripts developed by Almeida-E-Silva et. al, see the **README** in the scripts/ directory.
 
 After you have successfully:
 1. generated a phylogeny (and put it in <SIFTER>/reconciled/reconciled-<FAMILY>.nex)
