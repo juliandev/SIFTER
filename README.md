@@ -5,7 +5,7 @@ SIFTER is a statistical approach to predicting protein function that uses a prot
 
 This package include a genetic algorithm for parameter estimation of SIFTER algorithm. 
 
-The parameter estimation of SIFTER through Genetic Algorithms called GAPE (Genetic Algorithm for Parameter Estimation) is developed by Julian CastaÃ±eda and Tania Rodriguez at Department of Systems Engineering and Computing, Antonio Narino University.
+The estimation of SIFTER parameters through Genetic Algorithms called GAPE (Genetic Algorithm for Parameter Estimation) was developed by Julian Castañeda and Tania Rodríguez in the Department of Systems Engineering and Computer Science at the Antonio Narino University.
 
 The original SIFTER algorithm is developed by Barbara E Engelhardt. 
 Original paper:
