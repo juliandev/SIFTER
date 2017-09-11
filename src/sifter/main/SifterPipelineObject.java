@@ -215,7 +215,7 @@ public class SifterPipelineObject {
 				int iterations = (int)settings.getSetting("generations");
 				int[] rowNames = pfgodag.probabilisticDAG.getAllLeaves().stream().mapToInt((Integer i) -> i.intValue()).toArray(); 
 				double geneticoperators = (double)settings.getSetting("geneticoperators");
-				String idFamily = this.getFamily().getID().toString();
+				String idFamily = (String) this.settings.getSetting("family");
 				
 				long startTime = System.nanoTime(); //Start time counter
 				
@@ -702,6 +702,8 @@ public class SifterPipelineObject {
 		System.out.println("Cross-validation results: "
 		                   + ((double)correctGO / (double)totalGO)
 		                   + " (" + correctGO + " out of " + totalGO + ")");
+		
+		System.out.println("correctGO: " + correctGO + "\ttotalGO: " + totalGO);
 		return ((double)correctGO / (double)totalGO);
 	}
 

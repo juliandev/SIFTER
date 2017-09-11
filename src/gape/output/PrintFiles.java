@@ -5,7 +5,7 @@
 # Copyright (c) 2017. Eng. (C) Julian Camilo Castañeda Alonso and Msc. Tania Andrea Rodriguez Quiñones. Universidad Antonio Narino. All rights reserved.
 #
 # GAPE is free software: you can redistribute it and/or modify it under the terms of the 
-# Apache License 2.0 found in the LICENSE file in the root directory of this project.
+# GNU General Public License v3.0 found in the LICENSE file in the root directory of this project.
 */
 
 package gape.output; 

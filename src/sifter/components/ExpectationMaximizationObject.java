@@ -803,7 +803,11 @@ public class ExpectationMaximizationObject {
 			if (verbose)
 				System.out.println("Total correct: "
 				                   + ((double)totalPCorrect / (double)totalP));
-
+				
+				System.out.println("---------------------------------------------------");
+				System.out.println("totalPCorrect: " + totalPCorrect + "\ttotalP: " + totalP);
+				System.out.println("---------------------------------------------------");
+				
 		if (totalP == 0)
 			return 1.0;
 
