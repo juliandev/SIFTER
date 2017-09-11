@@ -8,7 +8,6 @@
 # GNU General Public License v3.0 found in the LICENSE file in the root directory of this project.
 */
 
-
 package gape.markov_model; 
 
 /**

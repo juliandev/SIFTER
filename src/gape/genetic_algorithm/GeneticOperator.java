@@ -8,7 +8,6 @@
 # GNU General Public License v3.0 found in the LICENSE file in the root directory of this project.
 */
 
-
 package gape.genetic_algorithm;
 import java.util.Random;
 import java.util.Vector;

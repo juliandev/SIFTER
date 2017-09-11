@@ -281,6 +281,7 @@ public class Population {
 		return rnd.nextDouble() < point ? player_1 : player_2;		
 	}
 	
+	// TODO
 	/**
 	 * This method selects the best individual from the population
 	 * @return the best individual of population

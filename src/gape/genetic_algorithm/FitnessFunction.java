@@ -8,7 +8,6 @@
 # GNU General Public License v3.0 found in the LICENSE file in the root directory of this project.
 */
 
-
 package gape.genetic_algorithm; 
 
 /**
@@ -85,7 +84,7 @@ public class FitnessFunction {
 	
 	/**
 	 * This method calculate the difference between speciation and duplication events 
-	 * @param phiArray
+	 * @param sigmaArray
 	 * @return the difference between the events
 	 */
 	private double sigmaArray(double[] sigmaArray) {
