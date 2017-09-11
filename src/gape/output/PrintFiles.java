@@ -184,7 +184,7 @@ public class PrintFiles {
         
 	}
 	
-	public void printBestIndividual(String output, String bestIndividual, String timeExecution) {
+	public void printBestIndividual(String output, String bestIndividual) {
 		
 		File o = new File(output);
 		
@@ -211,9 +211,44 @@ public class PrintFiles {
     		fw = new FileWriter(o.getAbsoluteFile(), true);
     		bw = new BufferedWriter(fw);
     		
-    		bw.write(bestIndividual);
-    		bw.write("\n\nElapsed Time: " + timeExecution + " seconds\n\n");
+    		bw.write(bestIndividual);    		
+			bw.flush();
+		} 
+    	catch (IOException e) 
+    	{
+			e.printStackTrace();
+		}
+        
+	}
+	
+	public void printTimeExecution(String output, String timeExecution) {
+		
+		File o = new File(output);
+		
+		FileWriter fw;
+		
+		if (!o.exists()) 
+        {
+            try 
+            {
+                o.createNewFile();
+            } 
+            catch (IOException ex) 
+            {
+                Logger.getLogger(PrintFiles.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("\n\nFile " + o);
+                System.exit(0);
+            }
+        }
+		
+		BufferedWriter bw = null;
+		
+        try 
+    	{
+    		fw = new FileWriter(o.getAbsoluteFile(), true);
+    		bw = new BufferedWriter(fw);
     		
+    		bw.write("\nExecution Time: " + timeExecution);    		
 			bw.flush();
 		} 
     	catch (IOException e) 

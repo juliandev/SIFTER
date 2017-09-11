@@ -313,6 +313,7 @@ public class Population {
 		files.printTransitionMatrix("output/infer-" + this.idFamily + ".fx", this.population.get(index).getTransitionMatrix(), this.rowNames);
 		files.printAlpha("output/alpha-" + this.idFamily + ".fx", this.population.get(index).getAlpha());
 		files.printSigma("output/scale-" + this.idFamily + ".fx", this.population.get(index).getSigma());
+		files.printBestIndividual("output/BestIndividual.txt", best);
 		
 		return best;
 		

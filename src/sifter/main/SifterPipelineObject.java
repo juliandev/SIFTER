@@ -17,6 +17,7 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 import gape.genetic_algorithm.Population;
+import gape.output.PrintFiles;
 import sifter.components.ExpectationMaximizationObject;
 import sifter.components.GOOntologyWrapper;
 import sifter.components.GOTermConversionMatrixAndMarkovTransitionMatrixInputAndMathObject;
@@ -223,6 +224,10 @@ public class SifterPipelineObject {
 				population.getBest();
 				
 				double elapsedTimeInSec = (System.nanoTime() - startTime) * 1.0e-9;
+				
+				PrintFiles files = new PrintFiles();
+				
+				files.printTimeExecution("output/BestIndividual.txt", String.valueOf(elapsedTimeInSec));
 				
 				System.out.println(elapsedTimeInSec);
 			}
