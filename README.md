@@ -19,7 +19,9 @@ doi: 10.2144/000114266
 
 Other previous developers: Philip Johnson, Steven R. Chan, Micheal Souza.
 
-You can also use the SIFTER webserver at [Berkeley](http://sifter.berkeley.edu) to access online the predictions on 16,863,537 proteins across 232,403 species.
+You can also use the SIFTER webserver at [Berkeley](http://sifter.berkeley.edu) to access online the predictions on 16,863,537 proteins across 232,403 species. 
+
+SIFTER repository: http://sifter.berkeley.edu/download/
 
 ## Usage
 usage: `java -jar sifter.jar [OPTIONS] FAMILYNAME`

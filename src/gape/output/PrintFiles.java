@@ -248,7 +248,7 @@ public class PrintFiles {
     		fw = new FileWriter(o.getAbsoluteFile(), true);
     		bw = new BufferedWriter(fw);
     		
-    		bw.write("\nExecution Time: " + timeExecution);    		
+    		bw.write("\nExecution Time: " + timeExecution + "\n\n");    		
 			bw.flush();
 		} 
     	catch (IOException e) 
