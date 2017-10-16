@@ -239,6 +239,8 @@ public class ExpectationMaximizationObject {
 		if (verbose)
 			prettyPrintProteinsValidation(pfx.getGOTerms(),
 			                              posteriors);
+		
+		prettyPrintProteinsValidation(pfx.getGOTerms(), posteriors);
 
 		//prettyPrintValidation(pfx.getNames(), posteriors);
 		return(posteriors);
@@ -780,6 +782,11 @@ public class ExpectationMaximizationObject {
 			                   / (double)totalGO)
 			                   + " out of " + totalGO + " ("
 			                   + (totalGO - correctGO) + " wrong)");
+		
+		System.out.println("Total (GOReal): " + ((double)correctGO
+                / (double)totalGO)
+                + " out of " + totalGO + " ("
+                + (totalGO - correctGO) + " wrong)");
 
 		if (verbose)
 			System.out.println(proteins.size() + "\t" + numIDA + "\t"
@@ -807,6 +814,9 @@ public class ExpectationMaximizationObject {
 				System.out.println("---------------------------------------------------");
 				System.out.println("totalPCorrect: " + totalPCorrect + "\ttotalP: " + totalP);
 				System.out.println("---------------------------------------------------");
+				
+				System.out.println("Total correct: "
+		                   + ((double)totalPCorrect / (double)totalP));
 				
 		if (totalP == 0)
 			return 1.0;

@@ -17,7 +17,6 @@ import java.util.Hashtable;
 import java.util.Vector;
 
 import gape.genetic_algorithm.Population;
-import gape.output.PrintFiles;
 import sifter.components.ExpectationMaximizationObject;
 import sifter.components.GOOntologyWrapper;
 import sifter.components.GOTermConversionMatrixAndMarkovTransitionMatrixInputAndMathObject;
@@ -197,20 +196,24 @@ public class SifterPipelineObject {
 					System.out.println("Mode: Estimating Network Parameters.");
 					System.out.println("**********************************************");
 				}
-				long startTime = System.currentTimeMillis();
+				long startTime = System.nanoTime(); //Start time counter
 				
 				estimateParameters(pfgodag, getFamily());
 				
-				long endTime = System.currentTimeMillis() - startTime;
+				double elapsedTimeInSec = (System.nanoTime() - startTime) * 1.0e-9;
 				
-				System.out.println(endTime);
+				System.out.println(elapsedTimeInSec);
+				
+				Runtime runtime = Runtime.getRuntime(); 
+				long memory = runtime.totalMemory() - runtime.freeMemory();
+		        System.out.println("Used memory is bytes: " + memory); 
 				
 			} else if (runmode.equals("gaparameterestimation")) {
-				System.out.println("GAPE");
+				/*System.out.println("GAPE");
 				System.out.println(settings.getSetting("population"));
 				System.out.println(settings.getSetting("generations"));
 				System.out.println(settings.getSetting("geneticoperators"));
-				System.out.println(this.getFamily().getID());
+				System.out.println(this.getFamily().getID());*/
 				
 				int populationSize = (int)settings.getSetting("population");
 				int iterations = (int)settings.getSetting("generations");
@@ -219,17 +222,17 @@ public class SifterPipelineObject {
 				String idFamily = (String) this.settings.getSetting("family");
 				
 				long startTime = System.nanoTime(); //Start time counter
-				
+								
 				Population population = new Population(populationSize, iterations, geneticoperators, rowNames, idFamily);
 				population.getBest();
-				
+								
 				double elapsedTimeInSec = (System.nanoTime() - startTime) * 1.0e-9;
+												
+				System.out.println("Tiempo de ejecución: " + elapsedTimeInSec);
 				
-				PrintFiles files = new PrintFiles();
-				
-				files.printTimeExecution("output/BestIndividual.txt", String.valueOf(elapsedTimeInSec));
-				
-				System.out.println(elapsedTimeInSec);
+				Runtime runtime = Runtime.getRuntime(); 
+				long memory = runtime.totalMemory() - runtime.freeMemory();
+		        System.out.println("Used memory is bytes: " + memory); 
 			}
 		}
 	}
@@ -454,7 +457,7 @@ public class SifterPipelineObject {
 			System.out.println("Escribiendo árbol en archivo");
 		}
 		
-		t.printTreeAsFile("phylogeneticTree.txt");
+		// t.printTreeAsFile("phylogeneticTree.txt");
 	}
 
 	/** Accessor for familyList.
