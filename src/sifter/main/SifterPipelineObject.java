@@ -196,13 +196,14 @@ public class SifterPipelineObject {
 					System.out.println("Mode: Estimating Network Parameters.");
 					System.out.println("**********************************************");
 				}
+				
 				long startTime = System.nanoTime(); //Start time counter
 				
 				estimateParameters(pfgodag, getFamily());
 				
 				double elapsedTimeInSec = (System.nanoTime() - startTime) * 1.0e-9;
 				
-				System.out.println(elapsedTimeInSec);
+				System.out.println("Tiempo de ejecución: " + elapsedTimeInSec);
 				
 				Runtime runtime = Runtime.getRuntime(); 
 				long memory = runtime.totalMemory() - runtime.freeMemory();
