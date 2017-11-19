@@ -242,12 +242,12 @@ public class Population {
 
 				}
 
-				/*newGeneration = this.replacement.steadyState(father_1, father_2, sons[0], sons[1]);
+				newGeneration = this.replacement.steadyState(father_1, father_2, sons[0], sons[1]);
 
 				nextGeneration.add(newGeneration[0]);
-				nextGeneration.add(newGeneration[1]);*/
-				nextGeneration.add(sons[0]);
-				nextGeneration.add(sons[1]);
+				nextGeneration.add(newGeneration[1]);
+				// nextGeneration.add(sons[0]);
+				// nextGeneration.add(sons[1]);
 			}
 
 			this.population = nextGeneration;
@@ -297,9 +297,7 @@ public class Population {
 	 * @return an individual
 	 */
 	private Individual tournament(Individual player_1, Individual player_2, Individual player_3, Individual player_4) {
-		System.out.println(player_1.getFitness() + "\t" + player_2.getFitness() + "\t" + player_3.getFitness() + "\t" + player_4.getFitness());
 		Individual winner = roulette(roulette(player_1, player_2), roulette(player_3, player_4));
-		System.out.println("Ganador: " + winner.getFitness());
 		return winner;
 	}
 
