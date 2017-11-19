@@ -1,8 +1,8 @@
 /*
 # GAPE - Genetic Algorithm for Parameter Estimation of SIFTER tool
 #
-# Created by Eng. (C) Julian Camilo Castañeda Alonso and Msc. Tania Andrea Rodriguez Quiñones on August 2017.
-# Copyright (c) 2017. Eng. (C) Julian Camilo Castañeda Alonso and Msc. Tania Andrea Rodriguez Quiñones. Universidad Antonio Narino. All rights reserved.
+# Created by Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones on August 2017.
+# Copyright (c) 2017. Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones. Universidad Antonio Narino. All rights reserved.
 #
 # GAPE is free software: you can redistribute it and/or modify it under the terms of the 
 # GNU General Public License v3.0 found in the LICENSE file in the root directory of this project.
@@ -14,7 +14,7 @@ import java.util.Random;
 
 /**
  * 
- * @author Eng. (C) Julian Camilo Castañeda Alonso - Msc. Tania Andrea Rodriguez Quiñones
+ * @author Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones
  *
  */
 
@@ -46,34 +46,26 @@ public class Replacement {
 
 			if (son_1.getFitness() < son_2.getFitness()) {
 
-				winners[0] = this.roulette(father_2, son_2); // Best father -
-																// Best son
-				winners[1] = this.roulette(father_1, son_1); // Worst father -
-																// Worst son
+				winners[0] = this.roulette(father_2, son_2); // Best father - Best son
+				winners[1] = this.roulette(father_1, son_1); // Worst father - Worst son
 
 			} else {
 
-				winners[0] = this.roulette(father_2, son_1); // Best father -
-																// Best son
-				winners[1] = this.roulette(father_1, son_2); // Worst father -
-																// Worst son
+				winners[0] = this.roulette(father_2, son_1); // Best father - Best son
+				winners[1] = this.roulette(father_1, son_2); // Worst father - Worst son
 
 			}
 		} else {
 
 			if (son_1.getFitness() < son_2.getFitness()) {
 
-				winners[0] = this.roulette(father_1, son_2); // Best father -
-																// Best son
-				winners[1] = this.roulette(father_2, son_1); // Worst father -
-																// Worst son
+				winners[0] = this.roulette(father_1, son_2); // Best father - Best son
+				winners[1] = this.roulette(father_2, son_1); // Worst father - Worst son
 
 			} else {
 
-				winners[0] = this.roulette(father_1, son_1); // Best father -
-																// Best son
-				winners[1] = this.roulette(father_2, son_2); // Worst father -
-																// Worst son
+				winners[0] = this.roulette(father_1, son_1); // Best father - Best son
+				winners[1] = this.roulette(father_2, son_2); // Worst father - Worst son
 
 			}
 		}

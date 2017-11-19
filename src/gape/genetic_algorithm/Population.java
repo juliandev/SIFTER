@@ -1,8 +1,8 @@
 /*
 # GAPE - Genetic Algorithm for Parameter Estimation of SIFTER tool
 #
-# Created by Eng. (C) Julian Camilo Castañeda Alonso and Msc. Tania Andrea Rodriguez Quiñones on August 2017.
-# Copyright (c) 2017. Eng. (C) Julian Camilo Castañeda Alonso and Msc. Tania Andrea Rodriguez Quiñones. Universidad Antonio Narino. All rights reserved.
+# Created by Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones on August 2017.
+# Copyright (c) 2017. Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones. Universidad Antonio Narino. All rights reserved.
 #
 # GAPE is free software: you can redistribute it and/or modify it under the terms of the 
 # GNU General Public License v3.0 found in the LICENSE file in the root directory of this project.
@@ -20,7 +20,7 @@ import gape.output.PrintFiles;
 
 /**
  * 
- * @author Eng. (C) Julian Camilo Castañeda Alonso - Msc. Tania Andrea Rodriguez Quiñones
+ * @author Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones
  *
  */
 
@@ -242,8 +242,11 @@ public class Population {
 
 				}
 
+				// if you want the replacement mechanism to be generational you
+				// must comment lines 249, 250 and 251 and uncomment lines 252
+				// and 253. To use the steady-state mechanism, you must do the
+				// opposite.
 				newGeneration = this.replacement.steadyState(father_1, father_2, sons[0], sons[1]);
-
 				nextGeneration.add(newGeneration[0]);
 				nextGeneration.add(newGeneration[1]);
 				// nextGeneration.add(sons[0]);

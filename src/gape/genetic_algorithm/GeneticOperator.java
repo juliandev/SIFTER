@@ -1,8 +1,8 @@
 /*
 # GAPE - Genetic Algorithm for Parameter Estimation of SIFTER tool
 #
-# Created by Eng. (C) Julian Camilo Castañeda Alonso and Msc. Tania Andrea Rodriguez Quiñones on August 2017.
-# Copyright (c) 2017. Eng. (C) Julian Camilo Castañeda Alonso and Msc. Tania Andrea Rodriguez Quiñones. Universidad Antonio Narino. All rights reserved.
+# Created by Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones on August 2017.
+# Copyright (c) 2017. Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones. Universidad Antonio Narino. All rights reserved.
 #
 # GAPE is free software: you can redistribute it and/or modify it under the terms of the 
 # GNU General Public License v3.0 found in the LICENSE file in the root directory of this project.
@@ -15,7 +15,7 @@ import java.util.Vector;
 
 /**
  * 
- * @author Eng. (C) Julian Camilo Castañeda Alonso - Msc. Tania Andrea Rodriguez Quiñones
+ * @author Eng. (C) Julian Camilo Castañeda Alonso, Msc. Carlos Andres Sierra and Msc. Tania Andrea Rodriguez Quiñones
  *
  */
 
@@ -190,6 +190,8 @@ public class GeneticOperator {
 		// Generate a random number in the selected position
 		childs[0][random] = rnd.nextDouble();
 
+		// For the first child if the event of the first position is greater
+		// than the value of the second position it exchanges them
 		if (childs[0][0] > childs[0][1]) {
 			double temp = childs[0][0];
 			childs[0][0] = childs[0][1];
@@ -202,6 +204,8 @@ public class GeneticOperator {
 		// Generate a random number in the selected position
 		childs[1][random] = rnd.nextDouble();
 
+		// For the first child if the event of the first position is greater
+		// than the value of the second position it exchanges them
 		if (childs[1][0] > childs[1][1]) {
 			double temp = childs[1][0];
 			childs[1][0] = childs[1][1];
@@ -314,8 +318,7 @@ public class GeneticOperator {
 		childs[1][point] = temp;
 
 		// For the first child if the event of the first position is greater
-		// than the value
-		// of the second position it exchanges them
+		// than the value of the second position it exchanges them
 		if (childs[0][0] > childs[0][1]) {
 
 			temp = childs[0][0];
@@ -325,8 +328,7 @@ public class GeneticOperator {
 		}
 
 		// For the second child if the event of the first position is greater
-		// than the value
-		// of the second position it exchanges them
+		// than the value of the second position it exchanges them
 		if (childs[1][0] > childs[1][1]) {
 
 			temp = childs[1][0];
