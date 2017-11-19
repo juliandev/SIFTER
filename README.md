@@ -13,7 +13,7 @@ Original paper:
 Genome-scale phylogenetic function annotation of large and diverse protein families. Genome Research 21:1969-1980. doi:10.1101/gr.104687.109 
 
 Please cite the last paper:
-- Danillo C. Almeida-E-Silva and Ricardo Vêncio
+- Danillo C. Almeida-E-Silva and Ricardo VÃªncio
 SIFTER-T: A scalable and optimized framework for the SIFTER phylogenomic method of probabilistic protein domain annotation. BioTechniques 58:140-142. 
 doi: 10.2144/000114266
 
