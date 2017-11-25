@@ -1,5 +1,5 @@
 # SIFTER
-### Parameter estimation for phylogeny-based protein function prediction using SIFTER (Statistical Inference of Function Through Evolutionary Relationships)
+## Parameter estimation for phylogeny-based protein function prediction using SIFTER (Statistical Inference of Function Through Evolutionary Relationships)
 
 SIFTER is a statistical approach to predicting protein function that uses a protein family's phylogenetic tree, as the natural structure for representing protein relationships, overlaid with all known protein functions in the family.
 
@@ -19,7 +19,7 @@ Information regarding the software requirements, configuration and inputs, usage
 
 =======================================================================
 
-#### License
+### License
 SIFTER was created by Barbara E Engelhardt Copyright (c) 2010. All Right Reserved. 
 Under active development by: Barbara Engelhardt <bee@compbio.berkeley.edu>
 Previous developers:
@@ -28,7 +28,7 @@ Steven R. Chan <steven@berkeley.edu>
 
 =======================================================================
 
-#### Configuration and inputs
+### Configuration and inputs
 
 
     -sfx,--scale <filename>             Set family .fx scale filename
@@ -157,12 +157,12 @@ Steven R. Chan <steven@berkeley.edu>
 
 =======================================================================
 
-#### Usage
+### Usage
 To run, just write on terminal: `java -jar sifter.jar [OPTIONS] FAMILYNAME`
 
 =======================================================================
 
-#### Setup
+### Setup
 To configure the files, databases, ontologies, etc. you can use the scripts developed by Almeida-E-Silva et. al, see the **README** in the scripts/ directory.
 
 After you have successfully:
@@ -180,7 +180,7 @@ We have included files for a family called "test" to run here.
 
 =======================================================================
 
-#### SIFTER output
+### SIFTER output
 The output for SIFTER (running inference) is a tab-delimited file (default: output/default.rdata) with the following columns:
 
 `<NODE NAME> <POSTERIOR FN1> ... <POSTERIOR FNm> <MAX POSTERIOR PREDICTION>`
@@ -193,13 +193,13 @@ The output for SIFTER (running leave-one-out cross-validation) is in the command
 
 =======================================================================
 
-#### Debbuging
+### Debbuging
 Please send any problems/comments/questions about **SIFTER** to bee@compbio.berkeley.edu.
 
 Please send any problems/comments/questions about **GAPE** to julicastaneda@uan.edu.co.
 
 =======================================================================
 
-#### License
+### License
 
 The estimation of SIFTER parameters through Genetic Algorithms called GAPE (Genetic Algorithm for Parameter Estimation) was created by Julian Camilo Castañeda, Carlos Andrés Sierra and Tania Andrea Rodríguez on 30 September 2017 Copyright (c) 2017 Universidad Antonio Nari&ntilde;o. All rights reserved.
