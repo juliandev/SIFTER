@@ -5,26 +5,31 @@ SIFTER is a statistical approach to predicting protein function that uses a prot
 
 This package include a genetic algorithm for parameter estimation of SIFTER algorithm. 
 
-The estimation of SIFTER parameters through Genetic Algorithms called GAPE (Genetic Algorithm for Parameter Estimation) was developed by Julian Castañeda, Carlos Andrés Sierra and Tania Rodríguez in the Department of Systems and Computer Engineering at the Antonio Nari&ntilde;o University.
-
-The original SIFTER algorithm is developed by Barbara E Engelhardt. 
-Original paper:
-- Engelhardt BE, Jordan MI, Srouji JR, Brenner SE. 2011. 
-Genome-scale phylogenetic function annotation of large and diverse protein families. Genome Research 21:1969-1980. doi:10.1101/gr.104687.109 
-
-Please cite the last paper:
-- Danillo C. Almeida-E-Silva and Ricardo VÃªncio
+[1] [Engelhardt BE, Jordan MI, Srouji JR, Brenner SE. 2011. 
+Genome-scale phylogenetic function annotation of large and diverse protein families. Genome Research 21:1969-1980. doi:10.1101/gr.104687.109](http://genome.cshlp.org/content/21/11/1969.full.pdf+html) 
+[2] [Danillo C. Almeida-E-Silva and Ricardo Vêncio
 SIFTER-T: A scalable and optimized framework for the SIFTER phylogenomic method of probabilistic protein domain annotation. BioTechniques 58:140-142. 
-doi: 10.2144/000114266
-
-Other previous developers: Philip Johnson, Steven R. Chan, Micheal Souza.
+doi: 10.2144/000114266](https://www.ncbi.nlm.nih.gov/pubmed/25757547)
 
 You can also use the SIFTER webserver at [Berkeley](http://sifter.berkeley.edu) to access online the predictions on 16,863,537 proteins across 232,403 species. 
 
 SIFTER repository: http://sifter.berkeley.edu/download/
 
-## Usage
-usage: `java -jar sifter.jar [OPTIONS] FAMILYNAME`
+Information regarding the software requirements, configuration and inputs, usage and outputs are available at follows.
+
+=======================================================================
+
+#### License
+SIFTER was created by Barbara E Engelhardt Copyright (c) 2010. All Right Reserved. 
+Under active development by: Barbara Engelhardt <bee@compbio.berkeley.edu>
+Previous developers:
+Philip Johnson <plfjohnson@berkeley.edu>
+Steven R. Chan <steven@berkeley.edu>
+
+=======================================================================
+
+#### Configuration and inputs
+
 
     -sfx,--scale <filename>             Set family .fx scale filename
                                         (default: data/scale-<FAMILY>.fx)
@@ -147,9 +152,17 @@ usage: `java -jar sifter.jar [OPTIONS] FAMILYNAME`
     -population,--population <number>   Number of individuals for
                                         genetic algorithm.
     -v,--verbose                        Verbose operation.
+
 **Note about command line options:** use option name with `--`, except in the case of verbose (use `-v`).
 
-## Setup
+=======================================================================
+
+#### Usage
+To run, just write on terminal: `java -jar sifter.jar [OPTIONS] FAMILYNAME`
+
+=======================================================================
+
+#### Setup
 To configure the files, databases, ontologies, etc. you can use the scripts developed by Almeida-E-Silva et. al, see the **README** in the scripts/ directory.
 
 After you have successfully:
@@ -165,12 +178,9 @@ Then play around with learning parameters, different datasets/phylogenies, cross
 
 We have included files for a family called "test" to run here.
 
-## Debbuging
-Please send any problems/comments/questions about **SIFTER** to bee@compbio.berkeley.edu.
+=======================================================================
 
-Please send any problems/comments/questions about **GAPE** to julicastaneda@uan.edu.co.
-
-## SIFTER output
+#### SIFTER output
 The output for SIFTER (running inference) is a tab-delimited file (default: output/default.rdata) with the following columns:
 
 `<NODE NAME> <POSTERIOR FN1> ... <POSTERIOR FNm> <MAX POSTERIOR PREDICTION>`
@@ -180,3 +190,16 @@ The order of the functions is identical to the order in the transition matrix pa
 The output for SIFTER (running GAPE) is the scale and transition matrix parameter files. Where they are exactly is output at the end of GAPE.
 
 The output for SIFTER (running leave-one-out cross-validation) is in the command line: the percentage of left-out elements that are correct according to their annotations. However, these are often wrong, so I'd would advise you to double check them manually from the output (I was lazy enough not to consider ties in posterior probabilities).
+
+=======================================================================
+
+#### Debbuging
+Please send any problems/comments/questions about **SIFTER** to bee@compbio.berkeley.edu.
+
+Please send any problems/comments/questions about **GAPE** to julicastaneda@uan.edu.co.
+
+=======================================================================
+
+#### License
+
+The estimation of SIFTER parameters through Genetic Algorithms called GAPE (Genetic Algorithm for Parameter Estimation) was created by Julian Camilo Castañeda, Carlos Andrés Sierra and Tania Andrea Rodríguez on 30 September 2017 Copyright (c) 2017 Universidad Antonio Nari&ntilde;o. All rights reserved.
