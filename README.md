@@ -7,6 +7,7 @@ This package include a genetic algorithm for parameter estimation of SIFTER algo
 
 [1] [Engelhardt BE, Jordan MI, Srouji JR, Brenner SE. 2011. 
 Genome-scale phylogenetic function annotation of large and diverse protein families. Genome Research 21:1969-1980. doi:10.1101/gr.104687.109](http://genome.cshlp.org/content/21/11/1969.full.pdf+html) 
+
 [2] [Danillo C. Almeida-E-Silva and Ricardo Vêncio
 SIFTER-T: A scalable and optimized framework for the SIFTER phylogenomic method of probabilistic protein domain annotation. BioTechniques 58:140-142. 
 doi: 10.2144/000114266](https://www.ncbi.nlm.nih.gov/pubmed/25757547)
@@ -21,10 +22,18 @@ Information regarding the software requirements, configuration and inputs, usage
 
 ### License
 SIFTER was created by Barbara E Engelhardt Copyright (c) 2010. All Right Reserved. 
-Under active development by: Barbara Engelhardt <bee@compbio.berkeley.edu>
+
 Previous developers:
 Philip Johnson <plfjohnson@berkeley.edu>
 Steven R. Chan <steven@berkeley.edu>
+
+=======================================================================
+
+### Requirements
+* Java 1.5 or more
+* Minimum 2 Gb RAM.
+* Intel Core2Duo 2.6 GHz processors.
+
 
 =======================================================================
 
@@ -158,7 +167,10 @@ Steven R. Chan <steven@berkeley.edu>
 =======================================================================
 
 ### Usage
+
 To run, just write on terminal: `java -jar sifter.jar [OPTIONS] FAMILYNAME`
+
+Then play around with learning parameters, different datasets/phylogenies, cross validation, etc.
 
 =======================================================================
 
@@ -169,12 +181,6 @@ After you have successfully:
 1. generated a phylogeny (and put it in <SIFTER>/reconciled/reconciled-<FAMILY>.nex)
 2. generated a .pli file (and put it in <SIFTER>/proteins/proteinfamily-<FAMILY>.pli)
 3. download the appropriate ontology (from Gene Ontology, renamed if necessary and placed in <SIFTER>/data/function.ontology)
-
-Made the java code: `java -jar sifter.jar <FAMILY> --generate` which will generate the parameter files with __GAPE__.
-
-`java -jar sifter.jar <FAMILY> -v`
-
-Then play around with learning parameters, different datasets/phylogenies, cross validation, etc.
 
 We have included files for a family called "test" to run here.
 
