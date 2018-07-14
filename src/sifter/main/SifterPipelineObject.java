@@ -173,7 +173,6 @@ public class SifterPipelineObject {
 			
 			//System.out.println("Output written to " + ConvMatrixOutFile + ", " + ScaleOutFile + ", " + AlphaOutFile);
 		} else {
-			//System.out.println(phylogenyFilename);
 			// Build the graphical model
 			buildGraphicalModel(pfgodag, phylogenyFilename, noIEA);
 			
@@ -203,18 +202,13 @@ public class SifterPipelineObject {
 				
 				double elapsedTimeInSec = (System.nanoTime() - startTime) * 1.0e-9;
 				
-				System.out.println("Tiempo de ejecución: " + elapsedTimeInSec);
+				System.out.println("Tiempo de ejecuciÃ³n: " + elapsedTimeInSec);
 				
 				Runtime runtime = Runtime.getRuntime(); 
 				long memory = runtime.totalMemory() - runtime.freeMemory();
 		        System.out.println("Used memory is bytes: " + memory); 
 				
 			} else if (runmode.equals("gaparameterestimation")) {
-				/*System.out.println("GAPE");
-				System.out.println(settings.getSetting("population"));
-				System.out.println(settings.getSetting("generations"));
-				System.out.println(settings.getSetting("geneticoperators"));
-				System.out.println(this.getFamily().getID());*/
 				
 				int populationSize = (int)settings.getSetting("population");
 				int iterations = (int)settings.getSetting("generations");
@@ -229,11 +223,11 @@ public class SifterPipelineObject {
 								
 				double elapsedTimeInSec = (System.nanoTime() - startTime) * 1.0e-9;
 												
-				System.out.println("Tiempo de ejecución: " + elapsedTimeInSec);
+				System.out.println("Tiempo de ejecuciÃ³n: " + elapsedTimeInSec);
 				
 				Runtime runtime = Runtime.getRuntime(); 
 				long memory = runtime.totalMemory() - runtime.freeMemory();
-		        System.out.println("Used memory is bytes: " + memory); 
+		        	System.out.println("Used memory is bytes: " + memory); 
 			}
 		}
 	}
@@ -455,7 +449,7 @@ public class SifterPipelineObject {
 		
 		// TODO
 		if ((Boolean)this.settings.getSetting("verbose")) {
-			System.out.println("Escribiendo árbol en archivo");
+			System.out.println("Escribiendo Ã¡rbol en archivo");
 		}
 		
 		// t.printTreeAsFile("phylogeneticTree.txt");
